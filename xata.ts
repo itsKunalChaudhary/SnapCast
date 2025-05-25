@@ -2,15 +2,16 @@
 import { buildClient } from "@xata.io/client";
 import type { BaseClientOptions } from "@xata.io/client";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type DatabaseSchema = {};
 
 const DatabaseClient = buildClient();
 
 const defaultOptions = {
   databaseURL:
-    "https://kkc_snapcast-5hklkh.ap-southeast-2.xata.sh/db/kkc_snapcast",
+      "https://kkc_snapcast-5hklkh.ap-southeast-2.xata.sh/db/kkc_snapcast",
   apiKey: process.env.XATA_API_KEY,
-  branch: 'main'
+  branch: "main",
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {

@@ -3,7 +3,8 @@
 import Image from "next/image";
 import {useRouter} from "next/navigation";
 import {daysAgo} from "@/lib/utils";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+// import {clearInterval, clearTimeout} from "node:timers";
 
 const VideoDetailHeader = ({ title, createdAt, userImg, username, videoId, ownerId, visibility, thumbnailUrl }: VideoDetailHeaderProps) => {
     const router = useRouter();
@@ -14,6 +15,14 @@ const VideoDetailHeader = ({ title, createdAt, userImg, username, videoId, owner
 
         setCopied(true);
     }
+
+    // useEffect(() => {
+    //     const changeChecked = setTimeout(() => {
+    //         if(copied) setCopied(false)
+    //     }, 2000);
+    //     return () => clearTimeout(changeChecked)
+    // }, [copied])
+
     return (
         <header className={"detail-header"}>
             <aside className={"user-info"}>
@@ -31,7 +40,7 @@ const VideoDetailHeader = ({ title, createdAt, userImg, username, videoId, owner
             </aside>
             <aside className={"cta"}>
                 <button onClick={handleCopyLink}>
-                    <Image src={copied ? "/assets/icons/checked.png" :"/assets/icons/link.svg"} alt={"Copy Link Icon"} width={24} height={24} />
+                    <Image src={copied ? "/assets/images/checked.png" :"/assets/icons/link.svg"} alt={"Copy Link Icon"} width={24} height={24} />
                 </button>
             </aside>
         </header>

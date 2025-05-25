@@ -178,7 +178,6 @@ export const getVideoById = withErrorHandling(async (videoId: string) => {
     );
     return videoRecord;
 });
-
 export const getTranscript = withErrorHandling(async (videoId: string) => {
     const response = await fetch(
         `${BUNNY.TRANSCRIPT_URL}/${videoId}/captions/en-auto.vtt`
