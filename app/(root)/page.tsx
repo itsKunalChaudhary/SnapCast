@@ -3,6 +3,7 @@ import SharedHeader from "@/components/SharedHeader";
 import VideoCard from "@/components/VideoCard";
 import EmptyState from "@/components/EmptyState";
 import Header from "@/components/Header";
+import Pagination from "@/components/Pagination";
 
 const page = async ({ searchParams }: SearchParams) => {
     const { query, filter, page } = await searchParams;
@@ -15,7 +16,7 @@ const page = async ({ searchParams }: SearchParams) => {
 
     return (
         <main className="wrapper page">
-            <Header subHeader="Public Library" title="All Videos" />
+            <SharedHeader subHeader="Public Library" title="All Videos" />
 
             {videos?.length > 0 ? (
                 <section className="video-grid">
@@ -42,14 +43,14 @@ const page = async ({ searchParams }: SearchParams) => {
                 />
             )}
 
-            {/*{pagination?.totalPages > 1 && (*/}
-            {/*    <Pagination*/}
-            {/*        currentPage={pagination.currentPage}*/}
-            {/*        totalPages={pagination.totalPages}*/}
-            {/*        queryString={query}*/}
-            {/*        filterString={filter}*/}
-            {/*    />*/}
-            {/*)}*/}
+            {pagination?.totalPages > 1 && (
+                <Pagination
+                    currentPage={pagination.currentPage}
+                    totalPages={pagination.totalPages}
+                    queryString={query}
+                    filterString={filter}
+                />
+            )}
         </main>
     );
 };

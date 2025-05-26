@@ -32,14 +32,14 @@ const page = async ({ params }: Params) => {
                     <VideoPlayer videoId={video.videoId} />
                 </div>
 
-                {/*<VideoInfo*/}
-                {/*    transcript={transcript}*/}
-                {/*    title={video.title}*/}
-                {/*    createdAt={video.createdAt}*/}
-                {/*    description={video.description}*/}
-                {/*    videoId={videoId}*/}
-                {/*    videoUrl={video.videoUrl}*/}
-                {/*/>*/}
+                <VideoInfo
+                    transcript={transcript}
+                    title={video.title}
+                    createdAt={video.createdAt}
+                    description={video.description}
+                    videoId={videoId}
+                    videoUrl={video.videoUrl}
+                />
 
             </section>
         </main>
