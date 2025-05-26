@@ -1,40 +1,114 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎥 Snapcast - Screen Recording & Video Sharing Platform
 
-## Getting Started
+**Snapcast** is a full-stack screen recording and video sharing web application built with cutting-edge technologies including **Next.js**, **Bunny.net**, **Xata**, and **Tailwind CSS**. It allows users to record their screens, upload and manage videos, generate AI-based transcripts, and securely share videos with powerful privacy and search features.
 
-First, run the development server:
+🌐 **Live App**: [snapcast-sooty.vercel.app](https://snapcast-sooty.vercel.app/)
+
+---
+
+## 🚀 Features
+
+- 🔐 **Authentication**  
+  Secure user login and registration using [Better Auth](https://betterauth.dev) and Google OAuth.
+
+- 📺 **Screen Recording**  
+  Record your screen directly within the browser—no extensions or installations required.
+
+- 📤 **Video Uploading**  
+  Upload videos seamlessly with support for both **public** and **private** visibility options.
+
+- 🧠 **AI-Generated Transcripts**  
+  Automatically generate searchable and accessible transcripts for uploaded videos.
+
+- 🔒 **Privacy Controls**  
+  Toggle video visibility between **public** and **private** modes.
+
+- 🧰 **Security Integration with Arcjet**  
+  Advanced bot protection, email validation, rate limiting, and form security powered by [Arcjet](https://arcjet.com).
+
+- 📊 **Video Metadata**  
+  View unique video IDs, URLs, and access detailed metadata for easy referencing.
+
+- 🔎 **Search Functionality**  
+  Intuitive search bar to locate your videos quickly and efficiently.
+
+- 🔗 **Sharable Links**  
+  Generate unique links to share videos securely with others.
+
+- 💅 **Responsive Modern UI**  
+  Clean and elegant UI/UX built with [Tailwind CSS](https://tailwindcss.com).
+
+- 🗃️ **Database Integration**  
+  Scalable real-time storage and management powered by [Xata](https://xata.io).
+
+- ✅ **Type-Safe ORM**  
+  Use [Drizzle ORM](https://orm.drizzle.team) for secure and type-safe SQL queries.
+
+- 🌐 **Cross-Device Compatibility**  
+  Fully responsive design ensures a seamless experience across all devices.
+
+---
+
+## 🧰 Tech Stack
+
+| Category              | Technology        |
+|-----------------------|-------------------|
+| **Frontend**          | Next.js, TypeScript, Tailwind CSS |
+| **Backend**           | Next.js API Routes |
+| **Authentication**    | Better Auth, Google OAuth |
+| **Database**          | Xata |
+| **ORM**               | Drizzle ORM |
+| **Video Delivery**    | Bunny.net |
+| **Security**          | Arcjet |
+| **Deployment**        | Vercel |
+
+---
+
+## 📁 Project Structure
+
+````
+/snapcast
+│
+├── /app # Next.js App Router
+├── /components # Reusable UI components
+├── /lib # Utility functions
+├── /styles # Tailwind and global styles
+├── /drizzle # Drizzle ORM config and schema
+├── /public # Static assets
+├── /types # TypeScript type definitions
+└── .env # Environment variables
+````
+
+
+## 🧪 How to Run Locally
 
 ```bash
+# Clone the repo
+git clone https://github.com/itsKunalChaudhary/LoomClone.git
+cd LoomClone
+
+# Install dependencies
+npm install
+
+# Setup environment variables
+cp .env.example .env
+# Fill in .env with your Xata, Bunny.net, Better Auth, and Arcjet credentials
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+## 🛡️ Security
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Snapcast is integrated with Arcjet to ensure:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Bot protection
+- Rate limiting
+- Email validation
+- Attack protection on forms and login routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# LoomClone
->>>>>>> d01dc9045fb989b23c263fbdb5856405ae5bca26
+## 📹 Powered By
+- Bunny.net: For fast and secure video delivery.
+- Better Auth: For scalable and flexible authentication.
+- Xata: For real-time database storage and search.
+- Drizzle ORM: For type-safe SQL operations.
+- Arcjet: For developer-first security integration.
